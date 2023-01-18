@@ -1,3 +1,10 @@
+# ------------------------------------------------
+# Program 1.2.1 String concatenation example
+# ( ruler.py )
+# Eric/a Seyden
+# 2023-01-18
+# ------------------------------------------------
+
 import stdio
 
 

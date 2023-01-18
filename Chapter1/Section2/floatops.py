@@ -1,8 +1,15 @@
+# ------------------------------------------------
+# Program 1.2.3 Integer Operators
+# ( intops.py )
+# Eric/a Seyden
+# 2023-01-18
+# ------------------------------------------------
+
 import stdio
 import sys
 
 
-def run(arg1, arg2):
+def main(arg1, arg2):
     a = float(arg1)
     b = float(arg2)
 
@@ -20,4 +27,4 @@ def run(arg1, arg2):
 
 
 if __name__ == "__main__":
-    run(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2])
