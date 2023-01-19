@@ -8,11 +8,11 @@ import sys
 import stdio
 
 
-def main():
+def main(argument1):
     stdio.write('Hi, ')
-    stdio.write(sys.argv[1])
+    stdio.write(argument1)
     stdio.writeln('. How are you?')
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1])

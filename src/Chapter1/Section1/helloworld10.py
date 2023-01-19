@@ -1,9 +1,10 @@
 # --------------------------
-# Program 1.1.1 Hello, World
-# ( helloworld.py )
+# Exercise 1.1.1 Hello, World
+# ( helloworld10.py )
 # Eric(a) Seyden
 # ---------------------------
 
+# import Book IO
 import stdio
 
 
