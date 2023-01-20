@@ -9,7 +9,7 @@ import sys
 import stdio
 
 
-def run(arg1, arg2):
+def main(arg1, arg2):
     a = int(arg1)
     b = int(arg2)
 
@@ -29,4 +29,4 @@ def run(arg1, arg2):
 
 
 if __name__ == "__main__":
-    run(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2])

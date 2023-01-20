@@ -1,11 +1,14 @@
-from Chapter1.Section1.helloworld import main as chapter1_section1_program1
-from Chapter1.Section1.useargument import main as chapter1_section1_program2
+# --------------------------
+# CSCI 151
+# ( main.py )
+# Eric(a) Seyden
+#
+# This programmatically runs all code in CSCI 151
+#
+# 2023-01-19
+# ---------------------------
 
-print("\nProgram 1.1.1 Hello, World\n")
+import Chapter1
 
-chapter1_section1_program1()
-
-print("\nProgram 1.1.2 Using a command-line argument\n")
-
-chapter1_section1_program2('Dave')
-
+Chapter1.Section1.main()
+Chapter1.Section2.main()

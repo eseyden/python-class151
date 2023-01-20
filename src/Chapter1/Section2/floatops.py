@@ -1,8 +1,8 @@
 # ------------------------------------------------
-# Program 1.2.3 Integer Operators
-# ( intops.py )
+# Program 1.2.3 Float Operators
+# ( floatops.py )
 # Eric/a Seyden
-# 2023-01-18
+# 2023-01-19
 # ------------------------------------------------
 
 import stdio
@@ -19,10 +19,10 @@ def main(arg1, arg2):
     quot = a / b
     exp = a ** b
 
-    stdio.writeln(str(a) + ' + ' + str(b) + ' = ' + str(total))
-    stdio.writeln(str(a) + ' - ' + str(b) + ' = ' + str(diff))
-    stdio.writeln(str(a) + ' * ' + str(b) + ' = ' + str(prod))
-    stdio.writeln(str(a) + ' / ' + str(b) + ' = ' + str(quot))
+    stdio.writeln(str(a) + ' +  ' + str(b) + ' = ' + str(total))
+    stdio.writeln(str(a) + ' -  ' + str(b) + ' = ' + str(diff))
+    stdio.writeln(str(a) + ' *  ' + str(b) + ' = ' + str(prod))
+    stdio.writeln(str(a) + ' /  ' + str(b) + ' = ' + str(quot))
     stdio.writeln(str(a) + ' ** ' + str(b) + ' = ' + str(exp))
 
 

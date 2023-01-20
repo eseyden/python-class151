@@ -38,6 +38,11 @@ as the book examples.
 }
 ```
 
+.env
+```ini
+PYTHONPATH=src
+```
+
 #### Testing just works in PyCharm
 
 [Check out JetBrain's Free Education Licenses](https://www.jetbrains.com/community/education/#students)
