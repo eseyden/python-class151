@@ -15,4 +15,4 @@ class Test(TestCase):
             """)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             Chapter1.Section2.ruler.main()
-            self.assertEqual(fake_out.getvalue(), expected)
+            self.assertEqual(expected, fake_out.getvalue())

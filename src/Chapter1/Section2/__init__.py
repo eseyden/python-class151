@@ -3,7 +3,7 @@ __all__ = ["ruler", "floatops", "intops", "quadratic", "leapyear", "stats", "sta
 from Chapter1.Section2 import *
 
 
-def main():
+def run_all():
     print("\nProgram 1.2.1\nString concatenation example\n\npython ruler.py")
     ruler.main()
 
@@ -33,5 +33,5 @@ def main():
     print("\nExercise 1.2.27\nUniform random numbers\n\npython stats.py")
     stats.main()
 
-    print("\nExercise 1.2.31\nThree-sort\n\npython threesort.py")
-    threesort.main()
+    print("\nExercise 1.2.31\nThree-sort\n\npython threesort.py 175 250 10")
+    threesort.main(175, 250, 10)

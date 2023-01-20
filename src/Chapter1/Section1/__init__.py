@@ -2,7 +2,7 @@ __all__ = ["helloworld", "helloworld10", "useargument", "usethree"]
 from Chapter1.Section1 import *
 
 
-def main():
+def run_all():
     print("\nProgram 1.1.1\nHello, World\n")
     helloworld.main()
 

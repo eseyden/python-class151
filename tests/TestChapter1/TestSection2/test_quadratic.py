@@ -13,7 +13,7 @@ class Test(TestCase):
             """)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             Chapter1.Section2.quadratic.main(-3.0, 2.0)
-            self.assertEqual(fake_out.getvalue(), expected)
+            self.assertEqual(expected, fake_out.getvalue())
 
     def test_main_float(self):
         expected = dedent("""\
@@ -22,11 +22,8 @@ class Test(TestCase):
             """)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             Chapter1.Section2.quadratic.main(-1.0, -1.0)
-            self.assertEqual(fake_out.getvalue(), expected)
+            self.assertEqual(expected, fake_out.getvalue())
 
     def test_main_error(self):
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            with self.assertRaises(ValueError):
-                Chapter1.Section2.quadratic.main(1.0, 1.0)
-                self.assertEqual(fake_out.getvalue(), "")
-
+        with self.assertRaises(ValueError):  # check that invalid input raises a Value Error
+            Chapter1.Section2.quadratic.main(1.0, 1.0)

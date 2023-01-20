@@ -12,7 +12,6 @@ class Test(TestCase):
         sorted_numbers = deepcopy(numbers)
         sorted_numbers.sort()
         expected = ""
-        print(repr(numbers))
         for number in sorted_numbers:
             expected += str(number) + "\n"
         with patch('sys.stdout', new=StringIO()) as fake_out:

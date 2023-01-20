@@ -1,3 +1,9 @@
+# -------------------------------------------
+# Test Program 1.1.2 Using a command-line argument
+# ( test_useargument.py )
+# Eric(a) Seyden
+# 2023-01-20
+# -------------------------------------------
 from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
@@ -12,4 +18,4 @@ class Test(TestCase):
             """)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             Chapter1.Section1.useargument.main('Dave')
-            self.assertEqual(fake_out.getvalue(), expected)
+            self.assertEqual(expected, fake_out.getvalue())

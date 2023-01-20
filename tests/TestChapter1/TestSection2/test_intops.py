@@ -17,4 +17,4 @@ class Test(TestCase):
             """)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             Chapter1.Section2.intops.main(1234, 5)
-            self.assertEqual(fake_out.getvalue(), expected)
+            self.assertEqual(expected, fake_out.getvalue())

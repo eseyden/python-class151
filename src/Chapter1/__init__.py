@@ -1,8 +1,9 @@
-__all__ = ["Section1", "Section2"]
+__all__ = ["Section1", "Section2", "Assignments"]
 
 from Chapter1 import *
 
 
-def main():
-    Section1.main()
-    Section2.main()
+def run_all():
+    Section1.run_all()
+    Section2.run_all()
+    Assignments.run_all()

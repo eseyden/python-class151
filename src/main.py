@@ -7,8 +7,5 @@
 #
 # 2023-01-19
 # ---------------------------
-
 import Chapter1
-
-Chapter1.Section1.main()
-Chapter1.Section2.main()
+Chapter1.run_all()
