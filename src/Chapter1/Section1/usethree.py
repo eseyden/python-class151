@@ -12,11 +12,11 @@ import stdio  # import textbook IO library
 def main(name1, name2, name3):  # main function
     # prints Hi and three parameters to standard output
     stdio.write('Hi, ')
-    stdio.write(name1)
+    stdio.write(name3)
     stdio.write(', ')
     stdio.write(name2)
     stdio.write(', and ')
-    stdio.writeln(name3)
+    stdio.writeln(name1)
 
 
 if __name__ == '__main__':  # command line call check
