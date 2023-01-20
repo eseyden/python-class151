@@ -7,5 +7,6 @@
 #
 # 2023-01-19
 # ---------------------------
-import Chapter1
+from src import *
+
 Chapter1.run_all()
