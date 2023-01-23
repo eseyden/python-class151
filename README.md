@@ -1,4 +1,4 @@
-# Eric Seyden's Python Homework
+# Eric/a Seyden's Python Homework
 ## for University of Montana's CSCI 151
 
 ### Book
