@@ -19,6 +19,5 @@ def main():
         stdio.writeln(str(i) + "th Hello")
         i = i + 1
 
-
 if __name__ == "__main__":
     main()

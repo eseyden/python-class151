@@ -13,10 +13,17 @@ def main(arg1, arg2, arg3):
     number1 = int(arg1)
     number2 = int(arg2)
     number3 = int(arg3)
+    
+    minimum = min(number1, number2, number3)
+    maximum = max(number1, number2, number3)
+    middle = number1 + number2 + number3 - minimum - maximum
 
-    stdio.writeln(min(number1, number2, number3))
-    stdio.writeln(max(min(number1, number2), min(number2, number3), min(number1, number3)))
-    stdio.writeln(max(number1, number2, number3))
+    stdio.writeln(str(minimum) + "\n" + str(middle) + "\n" + str(maximum))
+
+    # Weird implementation I used originally . . .
+    # stdio.writeln(min(number1, number2, number3))
+    # stdio.writeln(max(min(number1, number2), min(number2, number3), min(number1, number3)))
+    # stdio.writeln(max(number1, number2, number3))
 
 
 if __name__ == "__main__":
