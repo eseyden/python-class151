@@ -1,12 +1,13 @@
-#----------------------------------------
+# ----------------------------------------
 # Program 1.3.8 Gambler's ruin simulation
 # (gambler.py)
 # Eric/a Seyden
-# ---------------------------------------
+# ----------------------------------------
 
 import random
 import sys
 import stdio
+
 
 def main(arg1, arg2, arg3):
     stake = int(arg1)
@@ -28,6 +29,7 @@ def main(arg1, arg2, arg3):
     
     stdio.writeln(str(100 * wins // trials) + '% wins')
     stdio.writeln('Avg # bets: ' + str(bets // trials))
+
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2], sys.argv[3])
