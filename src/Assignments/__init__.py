@@ -1,6 +1,6 @@
 __all__ = ["compound", "windchill"]
 
-from Chapter1.Assignments import *
+from Assignments import *
 
 
 def run_all():

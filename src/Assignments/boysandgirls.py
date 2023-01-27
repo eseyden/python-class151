@@ -3,7 +3,7 @@
 # ( boysandgirls.py )
 #
 # Eric Seyden
-# 2023-01-25
+# 2023-01-27
 #
 # A couple beginning a family decides to keep having children
 # until they have at least one of either sex.
