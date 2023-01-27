@@ -4,7 +4,7 @@
 # Eric Seyden
 # 2023-01-27
 # -------------------------------
-# N = 2,000,000
+# N = 2,500,000
 # for empirical probability to
 # match exact probability
 # at 3 decimal places consistently.
@@ -57,8 +57,8 @@ def main(arg1):  # main function
     # -----------------------------------------------------
     stdio.writeln("\nDifference")
     for combined_dice_value in possible_combined_dice_values:
+        # compute difference and round to three places
         precision = 3
-        # compute difference and round
         difference = round(
             probability_list[combined_dice_value]
             -
@@ -66,6 +66,7 @@ def main(arg1):  # main function
             ,
             precision
         )
+        # output difference
         stdio.writeln(
 
             "Difference when sum is "
@@ -76,17 +77,29 @@ def main(arg1):  # main function
 
 
 # -------------------------------------------------------------------------
-# Exercise 1.4.20 Example code for generating dice roll probability list
+# Generate Empirical Probability
+#
+# Given a number of trials simulate rolling dice
+# With the simulated dataset
+# calculate the probability of getting a particular value
 # -------------------------------------------------------------------------
 def generate_empirical_probability(number_of_trials):
-
+    # initialize result list with zero value
+    # array index is the range of possible
+    # combinations of two dice
     empirical_results_list = stdarray.create1D(13, 0.0)
 
+    # run dice rolling simulation for requested number of trials
     for trial_count in range(0, number_of_trials):
+        # add two random ints with values between one and six
         dice_roll_result = random.randint(1, 6) + random.randint(1, 6)
+        # add one to tally list of results
         empirical_results_list[dice_roll_result] += 1.0
 
-    empirical_probability_list = empirical_results_list[:]
+    # I was making a copy to see the tally totals
+    # Replaced with pointer reference to save memory
+    # empirical_probability_list = empirical_results_list[:]
+    empirical_probability_list = empirical_results_list
 
     for combined_dice_value in range(2, 13):
         empirical_probability_list[combined_dice_value] /= number_of_trials
@@ -108,9 +121,5 @@ def generate_probability_list():
     return probabilities
 
 
-def get_random_dice_value():
-    return
-
-
-if __name__ == "__main__":
-    main(sys.argv[1])
+if __name__ == "__main__":  # check if run from command line
+    main(sys.argv[1])  # pass command line argument to main function
