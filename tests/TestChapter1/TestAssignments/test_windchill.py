@@ -10,7 +10,7 @@ from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
 from textwrap import dedent
-from Chapter1.Assignments import windchill
+from Assignments import windchill
 
 
 class Test(TestCase):  # define test class

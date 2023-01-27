@@ -10,7 +10,7 @@ from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
 from textwrap import dedent
-import Chapter1.Assignments.compound
+from Assignments import compound
 
 
 class Test(TestCase):  # define test class
@@ -20,7 +20,7 @@ class Test(TestCase):  # define test class
             """)  # initialize expected output, use dedent, so it aligns with block level
         # patch sys.stdout, so we can capture stdio.writeln()'s output
         with patch('sys.stdout', new=StringIO()) as fake_out:
-            Chapter1.Assignments.compound.main("2", "1500", ".04")  # run main function
+            compound.main("2", "1500", ".04")  # run main function
             self.assertEqual(expected, fake_out.getvalue())  # assert output matches expected output
 
     def test_main2(self):
@@ -29,5 +29,5 @@ class Test(TestCase):  # define test class
             """)  # initialize expected output, use dedent, so it aligns with block level
         # patch sys.stdout, so we can capture stdio.writeln()'s output
         with patch('sys.stdout', new=StringIO()) as fake_out:
-            Chapter1.Assignments.compound.main("10", "1500", ".04")  # run main function
+            compound.main("10", "1500", ".04")  # run main function
             self.assertEqual(expected, fake_out.getvalue())  # assert output matches expected output
