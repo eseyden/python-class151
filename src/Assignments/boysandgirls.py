@@ -24,25 +24,13 @@ import random
 def main(arg1):  # main entrypoint handles iterating over trials
     trials = int(arg1)  # cast argument 1 as int
     results = stdarray.create1D(trials, None)  # initialize trial results aray with null values
-
-    # initialize count distribution variables
-    two_children_count = 0
-    three_children_count = 0
-    four_children_count = 0
-    five_or_more_children_count = 0
+    distribution_list = stdarray.create1D(6, 0)  # init array to hold distribution stats
 
     for c in range(0, trials):  # iterate for the number of trials requested
         result = run_trial()  # call trial function and store the number of children
-
-        # if-else structure for incrementing result distribution counts
-        if result == 2:
-            two_children_count += 1
-        elif result == 3:
-            three_children_count += 1
-        elif result == 4:
-            four_children_count += 1
-        else:
-            five_or_more_children_count += 1
+        if result > 5:  # bin results with more than 5 as 5
+            result = 5
+        distribution_list[result] += 1  # increment corresponding result counter
 
         results[c] = result  # store result with the trial number as index
 
@@ -50,10 +38,10 @@ def main(arg1):  # main entrypoint handles iterating over trials
 
     # output results
     stdio.writeln("Avg # children: " + str(average_child_count))
-    stdio.writeln("Trials with 2 children: " + str(two_children_count))
-    stdio.writeln("Trials with 3 children: " + str(three_children_count))
-    stdio.writeln("Trials with 4 children: " + str(four_children_count))
-    stdio.writeln("Trials with 5 or more children: " + str(five_or_more_children_count))
+    stdio.writeln("Trials with 2 children: " + str(distribution_list[2]))
+    stdio.writeln("Trials with 3 children: " + str(distribution_list[3]))
+    stdio.writeln("Trials with 4 children: " + str(distribution_list[4]))
+    stdio.writeln("Trials with 5 or more children: " + str(distribution_list[5]))
 
 
 # run trial function
